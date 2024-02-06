@@ -1,0 +1,255 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.mainwallpaper{
+    background-image: url(as.png);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+
+}
+.header{
+    display: flex;
+    padding: 12px;
+}
+.brand{
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+}
+.options{
+    display: flex;
+    margin-left: auto;
+}
+.contact{
+    margin-right: 40px;
+    margin-left: 10px;
+    font-size: 18px;
+    font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+}
+.contact:hover{
+    scale: 1.1;
+}
+.myprod{
+    font-size: 18px;
+    font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  font-style: normal;
+}
+.myprod:hover{
+    scale: 1.1;
+}
+.headline{
+    font-size: 60px;
+    padding: 140px 80px;
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 80px;
+}
+.shoutout{
+    font-size: 30px;
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+.riga{
+    color: #2ecc72;
+    font-size: 80px;
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    animation: scaleAnimation 0.8s infinite alternate;
+    display: inline-block;
+}
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.fands{
+    color: #FAC42F;
+    background-color: black;
+    border-radius: 4px;
+    padding-left: 2px;
+    padding-right:2px: 
+}
+
+
+/* products */
+.products{
+    background-color: black;
+    display: flex;
+    padding: 140px 140px;
+}
+.details{
+    padding: 20px;
+}
+.image{
+    height: 300px;
+}
+.name{
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.intro{
+    color: white;
+}
+.rating{
+    color: white;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+.button{
+    background-color: #FAC42F;
+    padding: 10px 20px;
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.button:hover {
+    transform: scale(1.1);
+}
+
+
+/* footer */
+.footer {
+    background-color: black;
+    color: #fff;
+    padding: 80px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer-content {
+    max-width: 800px;
+}
+
+.footer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+
+.copyright{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+    color: white;
+}
+.insta img{
+   height: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        align-items: center;
+    }
+    .mainwallpaper{
+    background-image: url(wer.png);
+        height: 980px;
+        
+    }
+    .options {
+        padding-left: 2px;
+
+    }
+    .brand{
+        font-size: 30px;
+    }
+    .myprod{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .contact{
+        margin-left: 10px;
+    }
+    
+    .headline {
+        font-size: 28px;
+        padding: 80px 40px;
+    }
+    
+    .riga {
+        font-size: 40px;
+    }
+    
+    .products {
+        flex-direction: column;
+        padding: 40px;
+    }
+    
+    .details {
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    .name {
+        font-size: 30px;
+    }
+    
+    .intro, .rating {
+        font-size: 16px;
+    }
+    
+    .button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    
+    .footer {
+        flex-direction: column;
+        padding: 40px;
+    }
+    
+    .footer-content {
+        margin-bottom: 20px;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .social-icons a {
+        margin: 0 8px;
+    }
+    
+    .copyright {
+        padding: 10px 0;
+    }
+}
