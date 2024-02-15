@@ -1,255 +1,601 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Strike&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Riot&family=Protest+Strike&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.mainwallpaper{
-    background-image: url(as.png);
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-
+.mainwallpaper {
+  background-image: url(as.png);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
 }
-.header{
-    display: flex;
-    padding: 12px;
+.header {
+  display: flex;
+  padding: 12px;
 }
-.brand{
-    font-family: "Protest Riot", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 40px;
+.brand {
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 40px;
 }
-.options{
-    display: flex;
-    margin-left: auto;
+.options {
+  display: flex;
+  margin-left: auto;
 }
-.contact{
-    margin-right: 40px;
-    margin-left: 10px;
-    font-size: 18px;
-    font-family: "Protest Riot", sans-serif;
+a {
+  text-decoration: none;
+}
+.contact {
+  margin-right: 40px;
+  margin-left: 10px;
+  font-size: 18px;
+  font-family: "Protest Riot", sans-serif;
   font-weight: 400;
   font-style: normal;
   cursor: pointer;
 }
-.contact:hover{
-    scale: 1.1;
+.contact:hover {
+  scale: 1.1;
 }
-.myprod{
-    font-size: 18px;
-    font-family: "Protest Riot", sans-serif;
+.myprod {
+  font-size: 18px;
+  font-family: "Protest Riot", sans-serif;
   font-weight: 400;
   cursor: pointer;
   font-style: normal;
 }
-.myprod:hover{
-    scale: 1.1;
+.myprod:hover {
+  scale: 1.1;
 }
-.headline{
-    font-size: 60px;
-    padding: 140px 80px;
-    font-family: "Protest Riot", sans-serif;
-    font-weight: 400;
-    cursor: pointer;
-    line-height: 80px;
+.headline {
+  font-size: 60px;
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 80px;
 }
-.shoutout{
-    font-size: 30px;
-    font-family: "Protest Riot", sans-serif;
-    font-weight: 400;
-    cursor: pointer;
+.fronttext {
+  margin-left: 100px;
+  margin-top: 100px;
+  height: 400px;
 }
-.riga{
-    color: #2ecc72;
-    font-size: 80px;
-    font-family: "Protest Riot", sans-serif;
-    font-weight: 400;
-    animation: scaleAnimation 0.8s infinite alternate;
-    display: inline-block;
+.shoutout {
+  font-size: 30px;
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
 }
-@keyframes scaleAnimation {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.1);
-    }
+.shoutout2 {
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
 }
-
-.fands{
-    color: #FAC42F;
-    background-color: black;
-    border-radius: 4px;
-    padding-left: 2px;
-    padding-right:2px: 
+.riga {
+  color: #2ecc72;
+  font-size: 80px;
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  /* animation: scaleAnimation 0.8s infinite alternate; */
+  display: inline-block;
 }
-
-
-/* products */
-.products{
-    background-color: black;
-    display: flex;
-    padding: 140px 140px;
-}
-.details{
-    padding: 20px;
-}
-.image{
-    height: 300px;
-}
-.name{
-    color: white;
-    font-size: 50px;
-    margin-bottom: 20px;
-}
-.intro{
-    color: white;
-}
-.rating{
-    color: white;
-    padding-top: 20px;
-    margin-bottom: 20px;
-}
-.button{
-    background-color: #FAC42F;
-    padding: 10px 20px;
-    font-weight: bolder;
-    font-size: 20px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-.button:hover {
+/* @keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
     transform: scale(1.1);
+  }
+} */
+
+.fands {
+  color: #fac42f;
+  background-color: black;
+  border-radius: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.viewproducts {
+  background-color: black;
+  color: white;
+  padding: 10px 8px;
+  font-weight: 700;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.viewproducts :hover {
+  transform: scale(1.2);
+}
+/* .carediv */
+.carediv {
+  background-color: black;
+
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 90px;
+
+  padding-left: 40px;
+}
+.pic1 {
+  height: 400px;
+  margin-right: 40px;
+}
+.caretext {
+  color: white;
+  padding-left: 30px;
+}
+.caretext h2 {
+  padding-top: 20px;
+  font-size: 50px;
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+.caretext p {
+  padding-top: 40px;
+  font-size: 25px;
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 52px;
+}
+/* products   */
+.productdiv {
+  background-color: white;
+  padding: 50px 0;
+  padding-left: 10rem;
+}
+.productdiv h2 {
+  font-size: 60px;
+  padding-bottom: 40px;
+  padding-top: 50px;
+  color: black;
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+.productdiv h4 {
+  font-size: 30px;
+  padding-bottom: 30px;
+  color: black;
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+.products {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 80px;
+}
+.productcard {
+  background-color: black;
+  border-radius: 8px;
+  text-align: center;
+  margin-right: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+.productcard:hover {
+  scale: 1.1;
+}
+.productcard h3 {
+  font-size: 20px;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.products img {
+  height: 300px;
+  border-top-left-radius: 8px;
+
+  border-top-right-radius: 8px;
+}
+/* customerreview */
+.customerreview {
+  background-color: black;
+  padding: 80px 0;
+  padding-left: 160px;
+}
+.happycustomer {
+  font-weight: bold;
+}
+.customerreview h2 {
+  font-size: 44px;
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+.customerreview h3 {
+  font-size: 20px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+  color: white;
 }
 
+.allcutomercard {
+  display: flex;
+}
+.customerreview {
+  max-height: 400px; /* Set the maximum height of the customer review section */
+  overflow: hidden; /* Hide overflow content */
+}
+
+.allcutomercard {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding: 10px;
+  animation: scroll 162s linear infinite; /* Auto-scroll animation */
+}
+
+.review-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 0 300px; /* Set flex properties to ensure cards wrap properly */
+}
+
+.review-card h2 {
+  color: black;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.review-text {
+  font-style: italic;
+  color: black;
+  font-size: large;
+  font-weight: bold;
+}
+
+.review-info {
+  margin-top: 10px;
+}
+
+.reviewtextname,
+.reviewtextaddress {
+  margin: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% * 5));
+  } /* Adjust the number of visible reviews */
+}
+
+/* footer */
 
 /* footer */
 .footer {
-    background-color: black;
-    color: #fff;
-    padding: 80px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-
+  background-color: black;
+  color: #fff;
+  padding: 80px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-content {
-    max-width: 800px;
+  max-width: 800px;
 }
 
 .footer h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .footer p {
-    font-size: 16px;
-    margin-bottom: 5px;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 
 .social-icons {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .social-icons a {
-    color: #fff;
-    font-size: 24px;
-    margin: 0 10px;
-    text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
 .social-icons a:hover {
-    color: #ccc;
+  color: #ccc;
 }
 
-.copyright{
-    font-size: 20px;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: black;
-    color: white;
+.copyright {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 20px;
+  background-color: black;
+  color: white;
 }
-.insta img{
-   height: 20px;
+.insta img {
+  height: 20px;
+}
+/* Footer */
+
+footer {
+  background-color: BLACK;
+  color: #fff;
+  padding: 40px 0;
 }
 
-@media only screen and (max-width: 768px) {
-    .header {
-        align-items: center;
-    }
-    .mainwallpaper{
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-info,
+.social-icons {
+  flex: 1;
+  text-align: center;
+}
+
+.contact-info h3,
+.social-icons h3 {
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin-bottom: 5px;
+}
+
+.social-icons .icons a {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icons .icons a:hover {
+  color: #ccc;
+}
+
+.copyright {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.copyright {
+  padding-top: 20px;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+/* aboutus */
+
+.aboutus {
+  background-color: white;
+  height: 600px;
+  display: flex;
+  margin-top: 90px;
+  margin-left: 80px;
+}
+.aboutusimage {
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+.aboutuscolumn {
+  margin-left: 40px;
+  margin-right: 30px;
+}
+.aboutustitle {
+  font-size: 50px;
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.aboutustext {
+  font-size: 20px;
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  letter-spacing: 1px;
+  word-spacing: 6px;
+  line-height: 2.5rem;
+}
+.bold {
+  font-size: 30px;
+
+  font-weight: bold;
+}
+.footer {
+  background-color: black;
+}
+/* @media only screen and (max-width: 768px) {
+  .header {
+    align-items: center;
+  }
+  .mainwallpaper {
     background-image: url(wer.png);
-        height: 980px;
-        
-    }
-    .options {
-        padding-left: 2px;
+    height: 980px;
+  }
+  .options {
+    padding-left: 2px;
+  }
+  .brand {
+    font-size: 30px;
+  }
+  .myprod {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .contact {
+    margin-left: 10px;
+  }
 
-    }
-    .brand{
-        font-size: 30px;
-    }
-    .myprod{
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-    .contact{
-        margin-left: 10px;
-    }
-    
-    .headline {
-        font-size: 28px;
-        padding: 80px 40px;
-    }
-    
-    .riga {
-        font-size: 40px;
-    }
-    
-    .products {
-        flex-direction: column;
-        padding: 40px;
-    }
-    
-    .details {
-        padding: 20px 0;
-        text-align: center;
-    }
-    
-    .name {
-        font-size: 30px;
-    }
-    
-    .intro, .rating {
-        font-size: 16px;
-    }
-    
-    .button {
-        font-size: 16px;
-        padding: 8px 16px;
-    }
-    
-    .footer {
-        flex-direction: column;
-        padding: 40px;
-    }
-    
-    .footer-content {
-        margin-bottom: 20px;
-    }
-    
-    .social-icons {
-        justify-content: center;
-    }
-    
-    .social-icons a {
-        margin: 0 8px;
-    }
-    
-    .copyright {
-        padding: 10px 0;
-    }
+  .headline {
+    font-size: 28px;
+    padding: 80px 40px;
+  }
+
+  .riga {
+    font-size: 40px;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .footer-content {
+    margin-bottom: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .social-icons a {
+    margin: 0 8px;
+  }
+
+  .copyright {
+    padding: 10px 0;
+  }
+} */
+/* Default styles */
+
+/* Your existing CSS styles here */
+
+/* Media query for screens up to 768px wide (typically mobile phones) */
+@media only screen and (max-width: 768px) {
+  .mainwallpaper {
+    background-image: url(wer.png);
+    height: 980px; /* Adjust height to fit content */
+  }
+
+  .brand {
+    font-size: 40px; /* Decrease font size */
+    margin-right: 5px;
+  }
+
+  .options {
+    margin-right: 2px; /* Add some space between links */
+  }
+  .myprod {
+    margin-top: 8px;
+    margin-left: 30px;
+    font-size: 20px;
+  }
+  .contact {
+    margin-top: 8px;
+    font-size: 20px;
+  }
+  .fronttext {
+    margin: 140px 0;
+  }
+
+  .headline {
+    font-size: 40px;
+    line-height: 78px;
+    padding-left: 10px;
+  }
+  .shoutout {
+    padding-top: 30px;
+  }
+
+  /* Adjust styles for carediv */
+  .carediv {
+    flex-direction: column;
+    padding-right: 40px;
+  }
+
+  .pic1 {
+    display: none;
+    height: 170px;
+    margin-bottom: 20px; /* Add some space between images */
+  }
+
+  .caretext {
+    text-align: center; /* Center text */
+  }
+
+  .caretext h2 {
+    font-size: 24px; /* Decrease font size */
+    margin-bottom: 10px; /* Add some space below heading */
+  }
+
+  .caretext p {
+    font-size: 16px; /* Decrease font size */
+    line-height: 24px; /* Adjust line height */
+  }
+
+  /* Adjust styles for productdiv */
+  .productdiv {
+    padding: 20px; /* Add padding */
+  }
+
+  .products {
+    flex-direction: column; /* Stack products vertically */
+    align-items: center; /* Center products */
+  }
+
+  .productcard {
+    margin-bottom: 20px; /* Add some space between product cards */
+  }
+
+  .productcard img {
+    width: 100%; /* Make images responsive */
+  }
+
+  .productdiv h2,
+  .productdiv h4 {
+    text-align: center; /* Center headings */
+  }
+  .customerreview {
+    padding-left: 30px;
+  }
+  .allcutomercard {
+    width: 10%;
+  }
+  .aboutus {
+    flex-direction: column;
+    text-align: center;
+    margin-left: 10px;
+    height: auto;
+    margin-bottom: 40px;
+  }
+  .aboutusimage {
+    height: 280px;
+  }
+  .aboutustitle {
+    margin-top: 30px;
+    font-size: 30px;
+  }
+  .aboutustext {
+    font-size: 16px;
+  }
+  .bold {
+    font-size: 20px;
+  }
+
+  .footer-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Additional responsive styles can be added here as needed */
 }
