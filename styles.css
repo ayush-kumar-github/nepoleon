@@ -505,12 +505,12 @@ footer {
     font-size: 20px;
   }
   .fronttext {
-    margin: 140px 0;
+    margin: 135px 0;
   }
 
   .headline {
     font-size: 40px;
-    line-height: 78px;
+    line-height: 52px;
     padding-left: 10px;
   }
   .shoutout {
@@ -587,6 +587,7 @@ footer {
   }
   .aboutustext {
     font-size: 16px;
+    line-height: normal;
   }
   .bold {
     font-size: 20px;
@@ -596,6 +597,14 @@ footer {
     text-align: center;
     display: flex;
     flex-direction: column;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% * 100));
+    } /* Adjust the number of visible reviews */
   }
   /* Additional responsive styles can be added here as needed */
 }
