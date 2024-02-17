@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Strike&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Riot&family=Protest+Strike&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -17,10 +17,7 @@
   padding: 12px;
 }
 .brand {
-  font-family: "Protest Riot", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 40px;
+  height: 220px;
 }
 .options {
   display: flex;
@@ -52,15 +49,14 @@ a {
   scale: 1.1;
 }
 .headline {
-  font-size: 60px;
-  font-family: "Protest Riot", sans-serif;
-  font-weight: 400;
+  font-size: 40px;
+
   cursor: pointer;
-  line-height: 80px;
+  line-height: 60px;
 }
 .fronttext {
   margin-left: 100px;
-  margin-top: 100px;
+  margin-top: 10px;
   height: 400px;
 }
 .shoutout {
@@ -488,8 +484,7 @@ footer {
   }
 
   .brand {
-    font-size: 40px; /* Decrease font size */
-    margin-right: 5px;
+    height: 140px;
   }
 
   .options {
