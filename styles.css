@@ -12,51 +12,36 @@
   background-position: center;
   background-size: cover;
 }
-.header {
-  display: flex;
-  padding: 12px;
-}
-.brand {
-  height: 220px;
-}
-.options {
-  display: flex;
-  margin-left: auto;
-}
-a {
-  text-decoration: none;
-}
-.contact {
-  margin-right: 40px;
-  margin-left: 10px;
-  font-size: 18px;
-  font-family: "Protest Riot", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  cursor: pointer;
-}
-.contact:hover {
-  scale: 1.1;
-}
-.myprod {
-  font-size: 18px;
-  font-family: "Protest Riot", sans-serif;
-  font-weight: 400;
-  cursor: pointer;
-  font-style: normal;
-}
-.myprod:hover {
-  scale: 1.1;
-}
-.headline {
-  font-size: 40px;
 
-  cursor: pointer;
+.headline {
+  font-size: 44px;
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   line-height: 60px;
+}
+.headline2 {
+  font-size: 40px;
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 60px;
+}
+hr {
+  width: 30%;
+  margin-top: 20px;
+}
+.headline3 {
+  font-size: 26px;
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 60px;
+  letter-spacing: 1.7px;
 }
 .fronttext {
   margin-left: 100px;
-  margin-top: 10px;
+  margin-top: 90px;
   height: 400px;
 }
 .shoutout {
@@ -69,6 +54,158 @@ a {
   font-family: "Protest Riot", sans-serif;
   font-weight: 400;
 }
+/* toggle */
+
+body {
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+/* .container {
+  max-width: 1000px;
+} */
+#navbar {
+  --navbar-height: 64px;
+  height: 100px;
+}
+.logo {
+  height: 200px;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  height: 100%;
+  align-items: center;
+}
+.navbar-item {
+  width: 100%;
+}
+
+.home-link,
+.navbar-link {
+  text-decoration: none;
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+}
+
+.home-link:is(:focus, :hover) {
+  color: black;
+}
+
+.navbar-link {
+  justify-content: center;
+  width: 100%;
+  padding: 0.4em 0.8em;
+  font-weight: bold;
+  color: black;
+  border-radius: 5px;
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar-link:is(:focus, :hover) {
+  color: var(--navbar-text-color-focus);
+  background-color: var(--navbar-bg-contrast);
+}
+
+#navbar-toggle {
+  cursor: pointer;
+  border: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  color: white;
+  background-color: black;
+}
+
+.icon-bar {
+  display: block;
+  width: 25px;
+  height: 4px;
+  margin: 2px;
+  background-color: #ccc;
+}
+#navbar-toggle:is(:focus, :hover) .icon-bar {
+  /* background-color: var(--navbar-text-color-focus); */
+}
+#navbar-toggle[aria-expanded="true"] .icon-bar:is(:first-child, :last-child) {
+  position: absolute;
+  margin: 0;
+  width: 30px;
+}
+#navbar-toggle[aria-expanded="true"] .icon-bar:first-child {
+  transform: rotate(45deg);
+}
+#navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(2) {
+  opacity: 0;
+}
+#navbar-toggle[aria-expanded="true"] .icon-bar:last-child {
+  transform: rotate(-45deg);
+}
+#navbar-menu {
+  position: fixed;
+  top: var(--navbar-height);
+  padding-right: 100px;
+  visibility: hidden;
+  margin-left: auto;
+}
+#navbar-toggle[aria-expanded="true"] + #navbar-menu {
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  visibility: visible;
+}
+.navbar-links {
+  list-style: none;
+  position: absolute;
+  background-color: var(--navbar-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0;
+  right: 0;
+  margin-left: 240px;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#navbar-toggle[aria-expanded="true"] + #navbar-menu .navbar-links {
+  padding: 1em;
+}
+@media screen and (min-width: 700px) {
+  #navbar-toggle,
+  #navbar-toggle[aria-expanded="true"] {
+    display: none;
+  }
+
+  #navbar-menu,
+  #navbar-toggle[aria-expanded="true"] #navbar-menu {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    display: block;
+    height: 100%;
+  }
+
+  .navbar-links,
+  #navbar-toggle[aria-expanded="true"] #navbar-menu .navbar-links {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    position: static;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .riga {
   color: #2ecc72;
   font-size: 80px;
@@ -127,7 +264,7 @@ a {
 .caretext h2 {
   padding-top: 20px;
   font-size: 50px;
-  font-family: "Protest Riot", sans-serif;
+  font-family: "Protest Strike", sans-serif;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
@@ -135,7 +272,7 @@ a {
 .caretext p {
   padding-top: 40px;
   font-size: 25px;
-  font-family: "Protest Riot", sans-serif;
+  font-family: "Protest Strike", sans-serif;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
@@ -143,9 +280,8 @@ a {
 }
 /* products   */
 .productdiv {
-  background-color: white;
-  padding: 50px 0;
-  padding-left: 10rem;
+  padding: 0 100px;
+  height: 1050px;
 }
 .productdiv h2 {
   font-size: 60px;
@@ -169,13 +305,14 @@ a {
 .products {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 80px;
+  flex-wrap: wrap;
 }
 .productcard {
   background-color: black;
   border-radius: 8px;
   text-align: center;
   margin-right: 40px;
+  margin-bottom: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
 .productcard:hover {
@@ -224,7 +361,7 @@ a {
   display: flex;
 }
 .customerreview {
-  max-height: 400px; /* Set the maximum height of the customer review section */
+  max-height: 800px; /* Set the maximum height of the customer review section */
   overflow: hidden; /* Hide overflow content */
 }
 
@@ -232,7 +369,7 @@ a {
   display: flex;
   flex-wrap: nowrap;
   gap: 20px;
-  padding: 10px;
+  padding: 8px;
   animation: scroll 162s linear infinite; /* Auto-scroll animation */
 }
 
@@ -275,6 +412,53 @@ a {
   } /* Adjust the number of visible reviews */
 }
 
+/* skin diagram */
+.skindiagramdiv {
+  height: 700px;
+  padding: 0 80px;
+}
+.skindiagramdivh1 {
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 40px 0;
+  font-size: 40px;
+}
+.skindiagramdivinside {
+  display: flex;
+}
+.skindiagramdivh2 {
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.skindiagramdivimg {
+  height: 380px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+.skinlayer {
+  font-size: 20px;
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.function {
+  list-style: none;
+  display: flex;
+  margin-bottom: 40px;
+}
+.function li {
+  background-color: black;
+  color: white;
+  /* margin: 6px; */
+  margin-right: 6px;
+  font-size: 20px;
+  width: auto;
+  padding: 2px 3px;
+  border-radius: 4px;
+}
 /* footer */
 
 /* footer */
@@ -290,7 +474,10 @@ a {
 .footer-content {
   max-width: 800px;
 }
-
+.iconimg {
+  height: 50px;
+  background-color: black;
+}
 .footer h2 {
   font-size: 24px;
   margin-bottom: 10px;
@@ -397,7 +584,7 @@ footer {
 }
 .aboutustitle {
   font-size: 50px;
-  font-family: "Protest Riot", sans-serif;
+  font-family: "Protest Strike", sans-serif;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
@@ -405,8 +592,8 @@ footer {
 }
 .aboutustext {
   font-size: 20px;
-  font-family: "Protest Riot", sans-serif;
-  font-weight: 100;
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
   word-spacing: 6px;
@@ -420,59 +607,6 @@ footer {
 .footer {
   background-color: black;
 }
-/* @media only screen and (max-width: 768px) {
-  .header {
-    align-items: center;
-  }
-  .mainwallpaper {
-    background-image: url(wer.png);
-    height: 980px;
-  }
-  .options {
-    padding-left: 2px;
-  }
-  .brand {
-    font-size: 30px;
-  }
-  .myprod {
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-  .contact {
-    margin-left: 10px;
-  }
-
-  .headline {
-    font-size: 28px;
-    padding: 80px 40px;
-  }
-
-  .riga {
-    font-size: 40px;
-  }
-
-  .footer {
-    flex-direction: column;
-    padding: 40px;
-  }
-
-  .footer-content {
-    margin-bottom: 20px;
-  }
-
-  .social-icons {
-    justify-content: center;
-  }
-
-  .social-icons a {
-    margin: 0 8px;
-  }
-
-  .copyright {
-    padding: 10px 0;
-  }
-} */
-/* Default styles */
 
 /* Your existing CSS styles here */
 
@@ -500,13 +634,19 @@ footer {
     font-size: 20px;
   }
   .fronttext {
-    margin: 135px 0;
+    margin: 95px 0;
   }
 
   .headline {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 52px;
     padding-left: 10px;
+  }
+  .headline2 {
+    font-size: 30px;
+  }
+  .headline3 {
+    font-size: 20px;
   }
   .shoutout {
     padding-top: 30px;
@@ -541,6 +681,7 @@ footer {
   /* Adjust styles for productdiv */
   .productdiv {
     padding: 20px; /* Add padding */
+    height: auto;
   }
 
   .products {
@@ -549,7 +690,7 @@ footer {
   }
 
   .productcard {
-    margin-bottom: 20px; /* Add some space between product cards */
+    margin-bottom: 10px; /* Add some space between product cards */
   }
 
   .productcard img {
@@ -602,4 +743,26 @@ footer {
     } /* Adjust the number of visible reviews */
   }
   /* Additional responsive styles can be added here as needed */
+  .skindiagramdivinside {
+    flex-direction: column;
+  }
+  .skindiagramdiv {
+    height: auto;
+  }
+  .skindiagramdivh1 {
+    font-size: 26px;
+  }
+  .skindiagramdivh2 {
+    font-size: 18px;
+  }
+  .function {
+    flex-direction: column;
+  }
+  .function li {
+    margin-bottom: 10px;
+  }
+  .skindiagramdivimg {
+    height: 200px;
+    margin-bottom: 20px;
+  }
 }
